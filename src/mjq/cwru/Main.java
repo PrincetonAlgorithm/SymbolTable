@@ -10,7 +10,11 @@ public class Main {
         // write your code here
     }
 
-    public class Key {
+    public class Key implements Comparable<Key> {
+        @Override
+        public int compareTo(Key o) {
+            return 0;
+        }
     }
 
     public class Value {
@@ -28,7 +32,7 @@ public class Main {
     public class BinarySearchST {
     }
 
-    public class BinarySearchTreeST<Key extends Comparable<Key>> {
+    public class BinarySearchTreeST {
         private Node root;
 
         private class Node {
@@ -43,7 +47,7 @@ public class Main {
             }
         }
 
-        private class MyQueue<Key extends Comparable<Key>> implements Queue<Key> {
+        private class MyQueue<Key> implements Queue<Key> {
 
             @Override
             public int size() {
